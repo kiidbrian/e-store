@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Let's add these tags for Social Media Sharing -->
+    <title>Hubtel Webstore</title>
+    <meta name="description" content="Shop and pay online from {{storeName}} today. Want to sell your items online too? Sign up at hubtel.com now." />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{storeName}} - Hubtel Webstore" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{storeURL}}}" />
+    <meta property="og:image" content="https://hubtel.com/wp-content/themes/hubtel/html/assets/images/webstore-card.png" />
+    <meta property="og:description" content="Shop and pay online from {{storeName}} today. Want to sell your items online too? Sign up at hubtel.com now." />
+
+    <link rel="icon" href="images/hub.png" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/store.css" rel="stylesheet">
+
+  </head>
+
+  <body onload="loader()">
+  <!-- Loader -->
+  <div id="loader">
+      <div class="d-flex flex-column h-100 justify-content-center">
+              <div id="loader-icon"></div>
+              <div id="loader-text">80% loading ..</div>
+      </div>
+  </div> 
+
+    <div id="wrapper" style="display:none;" class="">
+      <!-- Navigation -->
+      <nav class="navbar">
+          <div class="container justify-content-between justify-content-md-between p-0">         
+                <div class="bars open">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 20 20">
+                      <defs>
+                        <clipPath id="clip-menu2">
+                          <rect width="20" height="20"/>
+                        </clipPath>
+                      </defs>
+                      <g id="menu2" clip-path="url(#clip-menu2)">
+                        <line id="Line_1080" data-name="Line 1080" x2="11.714" transform="translate(4.5 6.5)" fill="none" stroke="#364052" stroke-width="1"/>
+                        <line id="Line_1081" data-name="Line 1081" x2="11.714" transform="translate(4.5 10.5)" fill="none" stroke="#364052" stroke-width="1"/>
+                        <line id="Line_1082" data-name="Line 1082" x2="11.714" transform="translate(4.5 14.5)" fill="none" stroke="#364052" stroke-width="1"/>
+                      </g>
+                    </svg> 
+                </div>
+           
+            <div class="navbar-brand m-0 mr-md-2" href="#"> 
+              <a href="index.html"><img src="images/hub.png" class="p-2 m-auto" /> Hubtel Web Store</a>
+            </div>
+            <div class="">
+              <div class="dropdown branches">
+                <button class="align-items-center border-0 btn btn-store d-flex dropdown-toggle font-weight-light inverse pr-0 pr-md-3 text-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <!-- <i class="fas fa-map-marker-alt mr-0 mr-md-2 text-primary"></i>  -->
+                    <img src="images/shop.png" class="mr-0 mr-md-1 mb-1 float-left d-block d-md-none" />
+                    <img src="images/shop1.png" class="d-md-block d-none mb-1 float-left mr-0 mr-md-1" />
+                    <span class="d-none d-md-inline-block mr-3">Main Branch </span> 
+                </button>
+                <div class="dropdown-menu mt-2 dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                 <h5 class="font-weight-bold mb-2"> Main Branch</h5>
+                 <p>63 Hotel Rd, Accra</p>
+                 <button class="btn btn-store w-100" data-toggle="modal" data-target="#branchModal">Switch Branch</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+  
+        <div class="brandDetails text-sm-left" id="sticky-div">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="align-items-center col-5 d-md-flex d-md-block d-none">   
+                <span class="d-none d-sm-inline"> info@bettystar.com</span> 
+                <span class="d-none d-sm-inline divider">|</span><span>020 580 3647</span>
+               </div>
+              <div class="catBar col-12 col-md-5 col-sm text-center text-md-right"> 
+                  <div class="barOptions">
+                      <div id="custom-search-input">
+                          <div class="input-group">
+                              <input type="text" class="form-control font-weight-light pr-0 input-lg" placeholder="Search Store">
+                              <span class="input-group-btn m-0">
+                                  <button class="align-items-center btn btn-info btn-lg d-flex h-100 m-0" type="button">
+                                      <img src="images/search.png" width="16"> 
+                                  </button>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="dropdown d-inline cart">
+                         <a href="#" class="cart-item py-3" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/cart1.png" width="25">  <span class="badge bg-primary m-0 rounded-circle text-white">9</span>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right px-3 py-3" aria-labelledby="dropdownMenuButton">
+                        <div class="row mb-2">
+                          <div class="col-3">
+                              <img src="images/5.png" width="48px"> 
+                          </div>
+                          <div class="col-7 p-0">
+                            <div>
+                              <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                              <p class="small m-0">Medium</p>
+                              <p class="m-0 small">2 X GHS 400</p>
+  
+                            </div>
+                           
+                          </div>
+                          <div class="col-1">
+                              <i class="far text-muted pointer  small fa-trash-alt"></i>
+  
+                          </div>
+  
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-3">
+                                <img src="images/7.png" width="48px"> 
+                            </div>
+                            <div class="col-7 p-0">
+                              <div>
+                                <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                                <p class="small m-0">Medium</p>
+                                <p class="m-0 small">2 X GHS 400</p>
+    
+                              </div>
+                             
+                            </div>
+                            <div class="col-1">
+                                <i class="far text-muted pointer  small fa-trash-alt"></i>
+    
+                            </div>
+    
+                          </div>
+                          <div class="row mb-2">
+                              <div class="col-3">
+                                  <img src="images/6.png" width="48px"> 
+                              </div>
+                              <div class="col-7 p-0">
+                                <div>
+                                  <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                                  <p class="small m-0">Medium</p>
+                                  <p class="m-0 small">2 X GHS 400</p>
+      
+                                </div>
+                               
+                              </div>
+                              <div class="col-1">
+                                  <i class="far text-muted pointer small fa-trash-alt"></i>
+      
+                              </div>
+      
+                            </div>
+                            <hr>
+                            <button class="btn btn-store w-100" data-toggle="modal"  data-target="#cartDrawer">View Cart</button>
+                      </div>
+                      </div>
+                     
+                  </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+    <div class="catBar pb-0">
+      <div class="container">
+        <div class="row">
+           <div class="col-12">
+
+              <h4 class="mt-2">Checkout</h4>
+              <hr>
+
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="items pb-4">
+        <div class="container">
+
+            <div class="row">
+                    <div class="col-12">
+                        
+                        <div class="checkout">
+                            <div class="cart">
+                                <div class="cart-item">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                            <h5><span class="currency">GHS</span> 8.00</h5>
+                                            <div class="small"> <a href="#">Remove</a> </div>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <div class="d-inline qtyBox">
+                                                <span class="px-3"> <sup><b>x</b></sup> 2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                            <h5><span class="currency">GHS</span> 8.00</h5>
+                                            <div class="small"> <a href="#">Remove</a> </div>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <div class="d-inline qtyBox">
+                                                <span class="px-3"> <sup><b>x</b></sup> 3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                            <h5><span class="currency">GHS</span> 8.00</h5>
+                                            <div class="small"> <a href="#">Remove</a> </div>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <div class="d-inline qtyBox">
+                                                <span class="px-3"> <sup><b>x</b></sup> 1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-footer d-block p-0">
+                                <div class="total p-3">
+                                    <div class="row">
+                                        <div class="mw-auto col-12 col-sm-12 col-md-6 offset-md-6">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h6 class="text-muted pt-2 text-right">Sub Total</h6>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <h5><span class="currency">GHS</span> 200 </h5>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h6 class="text-muted pt-2 text-right">Discount</h6>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <h5> 10 </h5>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5 class="text-muted pt-2 text-right">Total</h5>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <h4 class="font-weight-bold"> <span class="currency">GHS</span> 240 </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-store w-100" data-dismiss="modal" data-toggle="modal" data-target="#checkoutConfirm">Pay now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5">
+      <div class="container">
+        <p class="m-0 text-center text-muted">&copy;2018. Powered by Hubtel.</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/store.js"></script>
+
+  </body>
+
+</html>

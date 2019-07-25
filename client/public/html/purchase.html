@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Let's add these tags for Social Media Sharing -->
+    <title>Hubtel Webstore</title>
+    <meta name="description" content="Shop and pay online from {{storeName}} today. Want to sell your items online too? Sign up at hubtel.com now." />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{storeName}} - Hubtel Webstore" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{storeURL}}}" />
+    <meta property="og:image" content="https://hubtel.com/wp-content/themes/hubtel/html/assets/images/webstore-card.png" />
+    <meta property="og:description" content="Shop and pay online from {{storeName}} today. Want to sell your items online too? Sign up at hubtel.com now." />
+
+    <link rel="icon" href="images/hub.png" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/store.css" rel="stylesheet">
+
+  </head>
+
+  <body onload="loader()">
+  <!-- Loader -->
+  <div id="loader">
+      <div class="d-flex flex-column h-100 justify-content-center">
+              <div id="loader-icon"></div>
+              <div id="loader-text">80% loading ..</div>
+      </div>
+  </div> 
+
+    <div id="wrapper" style="display:none;" class="">
+      <!-- Navigation -->
+      <nav class="navbar">
+          <div class="container justify-content-between justify-content-md-between p-0">
+           
+                <i class="fas fa-bars open"></i>
+           
+            <div class="navbar-brand m-0 mr-md-2" href="#"> 
+              <a href="index.html"><img src="images/hub.png" class="p-2 m-auto" /> Hubtel Web Store</a>
+            </div>
+            <div class="">
+              <div class="dropdown branches">
+                <button class="border-0 btn pr-0 pr-md-2 btn-store dropdown-toggle font-weight-light inverse text-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <!-- <i class="fas fa-map-marker-alt mr-0 mr-md-2 text-primary"></i>  -->
+                    <img src="images/shop.png" class="mr-0 mr-md-1 mb-1" width="18" />
+                    <span class="d-none d-md-inline-block mr-3">Main Branch </span> 
+                </button>
+                <div class="dropdown-menu mt-2 dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                 <h5 class="font-weight-bold mb-2"> Main Branch</h5>
+                 <p>63 Hotel Rd, Accra</p>
+                 <button class="btn btn-store w-100" data-toggle="modal" data-target="#branchModal">Switch Branch</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      <div class="brandDetails text-sm-left" id="sticky-div">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="align-items-center col-5 d-md-flex d-md-block d-none">   
+              <span class="d-none d-sm-inline"> info@bettystar.com</span> 
+              <span class="d-none d-sm-inline divider">|</span><span>020 580 3647</span>
+             </div>
+            <div class="catBar col-12 col-md-5 col-sm text-center text-md-right"> 
+                <div class="barOptions">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" class="form-control pr-0 input-lg" placeholder="Search Store">
+                            <span class="input-group-btn m-0">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <img src="images/search.png" width="18px"> 
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dropdown d-inline cart">
+                       <a href="#" class="cart-item py-3" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/cart1.png" width="28px">  <span class="badge bg-primary m-0 rounded-circle text-white">9</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right px-3 py-3" aria-labelledby="dropdownMenuButton">
+                      <div class="row mb-2">
+                        <div class="col-3">
+                            <img src="images/5.png" width="48px"> 
+                        </div>
+                        <div class="col-7 p-0">
+                          <div>
+                            <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                            <p class="small m-0">Medium</p>
+                            <p class="m-0 small">2 X GHS 400</p>
+
+                          </div>
+                         
+                        </div>
+                        <div class="col-1">
+                            <i class="far text-muted pointer  small fa-trash-alt"></i>
+
+                        </div>
+
+                      </div>
+                      <div class="row mb-2">
+                          <div class="col-3">
+                              <img src="images/7.png" width="48px"> 
+                          </div>
+                          <div class="col-7 p-0">
+                            <div>
+                              <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                              <p class="small m-0">Medium</p>
+                              <p class="m-0 small">2 X GHS 400</p>
+  
+                            </div>
+                           
+                          </div>
+                          <div class="col-1">
+                              <i class="far text-muted pointer  small fa-trash-alt"></i>
+  
+                          </div>
+  
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-3">
+                                <img src="images/6.png" width="48px"> 
+                            </div>
+                            <div class="col-7 p-0">
+                              <div>
+                                <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                                <p class="small m-0">Medium</p>
+                                <p class="m-0 small">2 X GHS 400</p>
+    
+                              </div>
+                             
+                            </div>
+                            <div class="col-1">
+                                <i class="far text-muted pointer small fa-trash-alt"></i>
+    
+                            </div>
+    
+                          </div>
+                          <hr>
+                          <button class="btn btn-store w-100" data-toggle="modal"  data-target="#cartDrawer">View Cart</button>
+                    </div>
+                    </div>
+                   
+                </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="catBar">
+        <div class="container">
+          <div class="row">
+            <div class="col-8">
+                <!--<ul class="cat">
+                  <li> <a class="active" href="">All items</a>
+                  <li> <a href="">Shoes</a>
+                  <li> <a href="">Bags</a>
+                  <li> <a href="">Panties</a>
+                </ul>-->
+                <div class="btn-group categories">
+                    <button type="button" class="btn btn-store inverse dropdown-toggle" data-toggle="dropdown">All items <span class="caret"></span></button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu">
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Slippers</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Panties</a></li>
+                        <li><a href="#">Cups</a></li>
+                        <li><a href="#">Printers</a></li>
+                        <li><a href="#">Computers</a></li>
+                        <li><a href="#">Monitors</a></li>
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">MacBook Pro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4 text-right">
+                <div class="mt-2 barOptions">
+                  <a href="#search"> <img src="images/search.png" width="18px" /> </a>
+                  <a href="#" class="cart-item" data-toggle="modal" data-target="#cartDrawer">
+                    <img src="images/cart.png" width="18px" />  <span class="badge badge-danger rounded-circle">9</span>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="items pb-4">
+          <div class="container">
+            <!-- Page Heading -->
+            <div class="py-2">
+              <!--<small class="h5 font-weight-normal">Showing all items </small>-->
+              <div class="alert alert-success alert-dismissible fade show">
+                Yay! Your payment of <strong>20cedis</strong>  was received. Please check your phone for further details.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div> 
+            </div>
+            
+            <div class="row">
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/no-image.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Baggify</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                    <!--<div class="small mt-2"><a href="" class="btn btn-store inverse">Add cart</a></div>-->
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/ear2.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Baggify</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/boot.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Safety Boots Extraordinaire</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/ear1.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Baggify</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/no-image.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Baggify</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                    <!--<div class="small mt-2"><a href="" class="btn btn-store inverse">Add cart</a></div>-->
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/ear2.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Baggify</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/boot.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Safety Boots Extraordinaire</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                  <a href="details.html"><div class="img-holder w-100"><img class="img-fluid text-center" src="images/ear1.png" alt=""></div></a>
+                  <div class="card-body">
+                    <div class="item-title"><a href="details.html">Hubtel Baggify</a></div>
+                    <div class="item-price"> <span class="text-muted"><span class="currency">GHS</span>120</span></div>            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.row -->
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-left">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+      </div>
+      <!-- /.container -->
+
+      <!-- Footer -->
+      <footer class="py-4">
+        <div class="container">
+          <p class="m-0 text-center text-muted">&copy;2018. Powered by Hubtel.</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+    </div>
+
+
+    <!-- Cart Drawer Modal -->
+    <div class="modal fade modal-right-pane" id="cartDrawer" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="cartDrawerLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content d-block">
+
+          <div class="container">
+            <div class="modal-header">
+              <h4><i class="fas fa-cart-plus"></i> Shopping cart</h4>
+              <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>-->
+            </div>
+
+            <div class="modal-body p-0">
+              <div class="cart">
+                  <div class="cart-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <img class="cart-image" src="images/boot.png" class="img-fluid" width="100px" align=left />
+                                <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                <h5><span class="currency">GHS</span> 8.00</h5>
+                                <div class="small"> <a href="#">Remove</a> </div>
+                            </div>
+                            <div class="col-4 text-right">
+                              <div class="d-inline qtyBox">
+                                  <input type='button' value='-' class='qtyChange qtyminus' field='quantity1' />
+                                  <input type='text' name='quantity1' value='0' class='qty form-control text-center d-inline'  />
+                                  <input type='button' value='+' class='qtyChange qtyplus' field='quantity1' />
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="cart-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <img class="cart-image" src="images/ear1.png" class="img-fluid" width="100px" align=left />
+                                <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                <h5><span class="currency">GHS</span> 8.00</h5>
+                                <div class="small"> <a href="#">Remove</a> </div>
+                            </div>
+                            <div class="col-4 text-right">
+                              <div class="d-inline qtyBox">
+                                  <input type='button' value='-' class='qtyChange qtyminus' field='quantity2' />
+                                  <input type='text' name='quantity2' value='0' class='qty form-control text-center d-inline'  />
+                                  <input type='button' value='+' class='qtyChange qtyplus' field='quantity2' />
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="cart-item">
+                        <div class="row">
+                            <div class="col-8">
+                                <img class="cart-image" src="images/ear2.png" class="img-fluid" width="100px" align=left />
+                                <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                <h5><span class="currency">GHS</span> 8.00</h5>
+                                <div class="small"> <a href="#">Remove</a> </div>
+                            </div>
+                            <div class="col-4 text-right">
+                              <div class="d-inline qtyBox">
+                                  <input type='button' value='-' class='qtyChange qtyminus' field='quantity3' />
+                                  <input type='text' name='quantity3' value='0' class='qty form-control text-center d-inline'  />
+                                  <input type='button' value='+' class='qtyChange qtyplus' field='quantity3' />
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="modal-footer d-block p-0">
+              <div class="total p-3">
+                  <div class="row">
+                      <div class="col-6">
+                          <h5 class="text-muted pt-2">Sub Total</h5>
+                      </div>
+                      <div class="col-6 text-right">
+                          <h4><span class="currency">GHS</span> 200 </h4>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="m-2 float-right">
+                  <a href="#" data-dismiss="modal" aria-label="Close" class="m-2 btn btn-store inverse">Continue shopping</a> <a href="checkout.html" data-toggle="modal" data-dismiss="modal" data-target="#checkoutConfirm" class="m-2 btn btn-store">Proceed to checkout</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Cart Drawer Modal -->
+
+
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form action="search.html">
+            <input type="search" value="" placeholder="type keyword(s) here" />
+            <button type="submit" class="btn btn-store">Search</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="checkoutConfirm" tabindex="-1" role="dialog" aria-labelledby="checkoutConfirmTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-body pt-4">
+                <h4>Checkout?</h4>
+                <p>Are you sure we should proceed to checkout?</p>
+                <div style="background:#f4f4f4; color:#666; padding:15px;">
+                    <div class="row">
+                        <div class="col-6"> <h6 class="m-0">Cart items total</h6> </div>
+                        <div class="col-6 text-right"> <h6 class="m-0"> <strong><span class="currency">GHS</span> 200</strong> </h6> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-store inverse" data-dismiss="modal" data-toggle="modal" data-target="#cartDrawer">No! Take me to my cart</button>
+                <a href="#" class="btn btn-store">Yes! Proceed</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Branch Modal -->
+      <div class="modal fade" id="branchModal" tabindex="-1" role="dialog" aria-labelledby="checkoutConfirmTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-body pt-4">
+                <div class="text-center mt-3">
+                    <img class="cart-image" src="images/hub.png" class="img-fluid" width="30" />
+                  </div>
+                  <h5 class="text-center my-4 mb-5">RETHINK SHOES</h5>
+                  <p class="text-center">Welcome, please pick a branch to start shopping today.</p>
+                  <div class="text-center select-branch">
+                        <div class="btn-group branches w-100">
+                            <button type="button" class="btn btn-store text-left  inverse btn-block dropdown-toggle" data-toggle="dropdown">Main Branch <span class="caret"></span></button>
+                            <div class="dropdown-max">
+                                <ul class="dropdown-menu p-0 scrollable-menu" role="menu">
+                                <li><a href="#" class="border-bottom d-block py-2">Shoes</a></li>
+                                <li><a href="#" class="border-bottom d-block py-2">Slippers</a></li>
+                                <li><a href="#" class="border-bottom d-block py-2">Bags</a></li>
+                                <li><a href="#" class="border-bottom d-block py-2">Panties</a></li>
+                            </ul>
+                            </div>
+                          
+                        </div>
+
+                        <button class="btn btn-store w-100 mt-3" data-toggle="modal" data-target="#branchModal">Select Branch</button>
+                  </div>
+                  <p class="text-center small text-muted mt-5">If you change your branch while shopping, you may lose the contents of your cart.</p>
+              </div>
+           
+              </div>
+          </div>
+      </div>
+  
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/store.js"></script>
+
+  </body>
+
+</html>

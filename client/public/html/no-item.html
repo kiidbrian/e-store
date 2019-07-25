@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Owusu">
+
+    <!-- Let's add these tags for Social Media Sharing -->
+    <title>Hubtel Webstore</title>
+    <meta name="description" content="Shop and pay online from {{storeName}} today. Want to sell your items online too? Sign up at hubtel.com now." />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{storeName}} - Hubtel Webstore" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{storeURL}}}" />
+    <meta property="og:image" content="https://hubtel.com/wp-content/themes/hubtel/html/assets/images/webstore-card.png" />
+    <meta property="og:description" content="Shop and pay online from {{storeName}} today. Want to sell your items online too? Sign up at hubtel.com now." />
+    <link rel="icon" href="images/hub.png" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/store.css" rel="stylesheet">
+
+  </head>
+
+  <body onload="loader()">
+  <!-- Loader -->
+  <div id="loader">
+      <div class="d-flex flex-column h-100 justify-content-center">
+        <div id="loader-icon"></div>
+        <div id="loader-text">80% loading ..</div>
+      </div>
+  </div> 
+
+  <!-- Sidebar -->
+<div class="" id="sidebar">
+    <div class="overlay p-3 pl-4 d-inline-block shadow-lg font-weight-light">
+        <a class="d-block px-2 float-right"> &times;</a>
+        <div class="">
+            <div class="pb-4 pt-2">
+              <div class="m-0 tittle-dash position-relative font-weight-bold">Categories</div>
+            </div>
+
+            <div class="">
+                <div class="mobile" id="pnProductNav">
+                   <div class="d-flex text-center flex-column categories mobile slimScroll" id="pnProductNavContents" >
+                    <a href="#" class="pn-ProductNav_Link" aria-selected="true">All Items</a>
+                    <a href="no-item.html" class="pn-ProductNav_Link">No Item</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                    <a href="#" class="pn-ProductNav_Link">Tables</a>
+                    
+                   </div>
+                </div>
+            </div>
+          </div>
+    </div>
+   
+  </div>
+
+    <div id="wrapper" style="display:none;" class="">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="container justify-content-between justify-content-md-between p-0">         
+              <div class="bars open">
+                <img src="images/menu_nav.png" class="" width="30" />
+
+
+                  
+              </div>
+         
+          <div class="navbar-brand m-0 mr-md-2" href="#"> 
+            <a href="index.html"><img src="images/hub.png" class="p-2 m-auto" /> Hubtel Web Store</a>
+          </div>
+          <div class="">
+            <div class="dropdown branches">
+              <button class="align-items-center border-0 btn btn-store d-flex dropdown-toggle font-weight-light inverse pr-0 pr-md-3 text-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <!-- <i class="fas fa-map-marker-alt mr-0 mr-md-2 text-primary"></i>  -->
+                  <img src="images/shop.png" class="mr-0 mr-md-1 mb-1 float-left d-block d-md-none" />
+                  <img src="images/shop1.png" class="d-md-block d-none mb-1 float-left mr-0 mr-md-1" />
+                  <span class="d-none d-md-inline-block mr-3">Main Branch </span> 
+              </button>
+              <div class="dropdown-menu mt-2 dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+               <h5 class="font-weight-bold mb-2"> Main Branch</h5>
+               <p>63 Hotel Rd, Accra</p>
+               <button class="btn btn-store w-100" data-toggle="modal" data-target="#branchModal">Switch Branch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="brandDetails text-sm-left" id="sticky-div">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="align-items-center col-5 d-md-flex d-md-block d-none">   
+              <span class="d-none d-sm-inline"> info@bettystar.com</span> 
+              <span class="d-none d-sm-inline divider">|</span><span>020 580 3647</span>
+             </div>
+            <div class="catBar col-12 col-md-5 col-sm text-center text-md-right"> 
+                <div class="barOptions">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" class="form-control font-weight-light pr-0 input-lg" placeholder="Search Store">
+                            <span class="input-group-btn m-0">
+                                <button class="align-items-center btn btn-info btn-lg d-flex h-100 m-0" type="button">
+                                    <img src="images/search.png" width="16"> 
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dropdown d-inline cart">
+                       <a href="#" class="cart-item py-3" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/cart1.png" width="25">  <span class="badge bg-primary m-0 rounded-circle text-white">9</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right px-3 py-3" aria-labelledby="dropdownMenuButton">
+                      <div class="row mb-2">
+                        <div class="col-3">
+                            <img src="images/5.png" width="48px"> 
+                        </div>
+                        <div class="col-7 p-0">
+                          <div>
+                            <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                            <p class="small m-0">Medium</p>
+                            <p class="m-0 small">2 X GHS 400</p>
+
+                          </div>
+                         
+                        </div>
+                        <div class="col-1">
+                            <i class="far text-muted pointer  small fa-trash-alt"></i>
+
+                        </div>
+
+                      </div>
+                      <div class="row mb-2">
+                          <div class="col-3">
+                              <img src="images/7.png" width="48px"> 
+                          </div>
+                          <div class="col-7 p-0">
+                            <div>
+                              <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                              <p class="small m-0">Medium</p>
+                              <p class="m-0 small">2 X GHS 400</p>
+  
+                            </div>
+                           
+                          </div>
+                          <div class="col-1">
+                              <i class="far text-muted pointer  small fa-trash-alt"></i>
+  
+                          </div>
+  
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-3">
+                                <img src="images/6.png" width="48px"> 
+                            </div>
+                            <div class="col-7 p-0">
+                              <div>
+                                <p class="m-0 text-truncate">Mens Fitted Trousers </p>
+                                <p class="small m-0">Medium</p>
+                                <p class="m-0 small">2 X GHS 400</p>
+    
+                              </div>
+                             
+                            </div>
+                            <div class="col-1">
+                                <i class="far text-muted pointer small fa-trash-alt"></i>
+    
+                            </div>
+    
+                          </div>
+                          <hr>
+                          <button class="btn btn-store w-100" data-toggle="modal"  data-target="#cartDrawer">View Cart</button>
+                    </div>
+                    </div>
+                   
+                </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="items pb-4 content">
+          <div class="container">
+            <!-- Page Heading -->
+          
+
+            <div class="row mt-4">
+              <div class="col-2 d-none d-md-block">
+                <div class="sticky-top">
+                  <div class="pb-5 pt-2">
+                    <div class="m-0 tittle-dash position-relative font-weight-bold">Categories</div>
+                  </div>
+
+                  <div class="">
+                      <div class="" id="pnProductNav">
+                         <div class="d-flex text-center flex-column categories slimScroll" id="pnProductNavContents" >
+                          <a href="#" class="pn-ProductNav_Link" aria-selected="true">All Items</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                          <a href="#" class="pn-ProductNav_Link">Tables</a>
+                          <a href="#" class="pn-ProductNav_Link">Cookware</a>
+                         </div>
+                      </div>
+                  </div>
+                </div>
+                 
+              </div>
+              <div class="col">
+                  <div class="pb-4 pb-md-5 pt-2">
+                        <div class="row justify-content-between">
+                            <div class="col-4">
+                                <small class="h6 font-weight-normal text-muted">All Items </small>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-none">  
+                                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select> 
+                                </div> 
+                            </div>
+                          </div>
+                    </div>
+                <div class="no-item d-flex flex-column align-items-center text-center pt-5">
+                        <img class="img-fluid mb-3" src="images/bag1.png" alt="" width="80"> 
+
+                        <h4>No Items</h4>
+                        <p>Sorry, there are no items in this category,<br> please go back and try another.</p>
+
+
+                </div>
+                  <div class="extras mb-3 mt-3">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class=" d-flex text-white justify-content-center align-items-center tiles-blue" data-toggle="modal" data-target="#extraDrawer">
+                            <img class="img-fluid h-100 mr-3" src="images/deliver.png" alt="" width="58">
+                            <div>
+                              <h5 class="m-0">FAST DELIVERY</h5>
+                              <p class="m-0">For all orders</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class=" d-flex text-white justify-content-center align-items-center tiles-orange" data-toggle="modal" data-target="#extraDrawer">
+                              <img class="img-fluid h-100 mr-3" src="images/back.png" alt="" width="32">
+                              <div>
+                                <h5 class="m-0">FREE RETURNS</h5>
+                                <p class="m-0">For all orders</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" d-flex text-white justify-content-center align-items-center tiles-green" data-toggle="modal" data-target="#extraDrawer">
+                                <img class="img-fluid h-100 mr-3" src="images/telephone.png" alt="" width="43">
+                                <div>
+                                  <h5 class="m-0">CUSTOMER CARE</h5>
+                                  <p class="m-0">For all orders</p>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+      
+                </div>
+            </div>
+            
+          
+          </div>
+      </div>
+      <!-- /.container -->
+
+      <!-- Footer -->
+      <footer class="">
+        <div class="container">
+          <p class="m-0 pb-4 small text-center text-muted">&copy;2019. Powered by <a href="#">Hubtel</a>.</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+    </div>
+
+
+     <!-- Cart Drawer Modal -->
+     <div class="modal fade modal-right-pane" id="cartDrawer" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="cartDrawerLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content d-block">
+  
+            <div class="container">
+              <div class="modal-header">
+                <h4><img src="images/cart1.png" width="18px"> Shopping cart</h4>
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>-->
+              </div>
+  
+              <div class="modal-body p-0">
+                <div class="cart">
+                    <div class="cart-item">
+                          <div class="row">
+                              <div class="col-8">
+                                  <img class="cart-image" src="images/boot.png" class="img-fluid" width="100px" align=left />
+                                  <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                  <h6><span class="currency">GHS</span> 8.00</h6>
+                                  <div class="small"> <a href="#">Remove</a> </div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="d-inline-flex justify-content-center qtyBox">
+                                    <input type='button' value='-' class='qtyChange qtyminus' field='quantity1' />
+                                    <input type='text' name='quantity1' value='0' class='qty form-control text-center d-inline' />
+                                    <input type='button' value='+' class='qtyChange qtyplus' field='quantity1' />
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="cart-item">
+                          <div class="row">
+                              <div class="col-8">
+                                  <img class="cart-image" src="images/ear1.png" class="img-fluid" width="100px" align=left />
+                                  <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                  <h6><span class="currency">GHS</span> 8.00</h6>
+                                  <div class="small"> <a href="#">Remove</a> </div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="d-inline-flex justify-content-center qtyBox">
+                                    <input type='button' value='-' class='qtyChange qtyminus' field='quantity2' />
+                                    <input type='text' name='quantity2' value='0' class='qty form-control text-center d-inline'  />
+                                    <input type='button' value='+' class='qtyChange qtyplus' field='quantity2' />
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="cart-item">
+                          <div class="row">
+                              <div class="col-8">
+                                  <img class="cart-image" src="images/ear2.png" class="img-fluid" width="100px" align=left />
+                                  <h6 class="text-muted">Timi Tom Shoe Lace</h6>
+                                  <h6><span class="currency">GHS</span> 8.00</h6>
+                                  <div class="small"> <a href="#">Remove</a> </div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="d-inline-flex justify-content-center qtyBox">
+                                    <input type='button' value='-' class='qtyChange qtyminus' field='quantity3' />
+                                    <input type='text' name='quantity3' value='0' class='qty form-control text-center d-inline'  />
+                                    <input type='button' value='+' class='qtyChange qtyplus' field='quantity3' />
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+  
+              <div class="modal-footer d-block p-0">
+                <div class="total p-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 class="text-muted pt-2">Sub Total</h5>
+                        </div>
+                        <div class="col-6 text-right">
+                            <h4><span class="currency">GHS</span> 200 </h4>
+                        </div>
+                    </div>
+                </div>
+  
+                <div class="text-right action-buttons">
+                    <a href="#" data-dismiss="modal" aria-label="Close" class="btn btn-store inverse m-0 m-md-2 mt-md-0 text-primary">Continue shopping</a> 
+                    <a href="#"  data-toggle="modal" data-target="#deliveryDrawer" class="btn btn-store m-md-2 mb-3 mt-3">Proceed</a>
+                </div>
+                <!-- <div class="row justify-content-end">
+                  <div class="col-12 col-md-3 order-2 order-md-1">
+                      <a href="#" data-dismiss="modal" aria-label="Close" class="m-0 m-md-2 mt-3 mt-md-0 text-primary btn btn-store inverse">Continue shopping</a> 
+                  </div>
+                  <div class="col-12 col-md-3 order-1 order-md-2">
+                      <a href="#"  data-toggle="modal" data-target="#deliveryDrawer" class="m-0 m-md-2 btn btn-store">Proceed to delivery</a>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <!-- End Cart Drawer Modal -->
+  
+       <!-- Delivery Drawer Modal -->
+       <div class="modal fade modal-right-pane" id="deliveryDrawer" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="deliveryDrawerLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content d-block">
+        
+                  <div class="container">
+                   
+        
+                    <div class="modal-body p-0">
+                          <div class="catBar pt-md-4 pt-2 pb-md-3 pb-1">
+                              <div class="container p-0">
+                                  <div class="row">
+                                      <div class="col-12">
+                                      <span data-dismiss="modal" class="text-primary pointer">&lsaquo; Return</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row ">
+                              <div class="col-md-7">
+                                  <div class="mt-md-4 mt-2 mb-md-5 mb-3">
+                                      <h5 class="font-weight-bold">Delivery Options</h5>
+                                  </div>
+                                  
+                                  <div>
+                                      <div class="form-check pointer">
+                                          <input class="form-check-input" type="radio" value="" name="exampleRadios" id="pickup-item" >
+                                          <label class="form-check-label" for="pickup-item">
+                                                  <h5>Pick up In Store</h5>
+                                                  <p>Pick up from Main Branch with a valid receipt</p>
+                                          </label>
+                                      </div>
+                                      <div class="ml-5 mt-3 business-info">
+                                             <p class="font-weight-bold mb-1">Rethink Shoes</p>
+                                             <p class="mb-1">1 Hotel Avenue</p>
+                                             <p>+233 244 344 455 </p>
+                                      </div>
+                                  </div>
+                                 
+                                     
+                                  <div>
+                                      <div class="form-check pointer">
+                                          <input class="form-check-input" type="radio" value="" name="exampleRadios" id="deliver-item" checked>
+                                          <label class="form-check-label" for="deliver-item">
+                                                  <h5>Deliver with Hubtel Careforce</h5>
+                                              <p>Items will be delivered to your location for a fee</p>
+                                          </label>
+                                      </div>
+  
+                                      <div class="user-info">
+                                        <div class="ml-5">
+                                            <div class="form-group">
+                                                <label><strong>Phone Number</strong></label>
+                                                <div class="mt-1">  <input type="text" class="form-control py-2 rounded-0" placeholder="Enter phone number"> </div> 
+                                            </div>
+                                            <div class="form-group">
+                                                    <label><strong>Location</strong></label>
+                                                    <div class="mt-1">  <input type="text" class="form-control py-2 rounded-0" placeholder="Enter your location"> </div> 
+                                                </div>
+
+                                            <p class="mb-1">Delivery Fee: <span> GHS 30</span> </p>
+
+                                            <p class="text-muted small">Orders are dilevered between 9am-5pm.</p>
+                                        </div>
+                                       
+                                             
+  
+                                      </div>
+                                  </div>
+                                 
+      
+                                            
+          
+                                         
+                                     
+                                      <div class="mt-3 text-left action-buttons">
+                                          <a href="#" data-dismiss="modal" aria-label="Close" class="btn btn-store inverse m-0 m-md-2 mt-md-0 text-primary">Continue shopping</a> 
+                                          <a href="#"  data-toggle="modal" data-dismiss="modal" data-target="#deliveryDrawer" class="btn btn-store m-md-2 mb-3 mt-3">Proceed to checkout</a>
+                                      </div>
+                              
+  
+                              </div>
+                              <div class="col-md-4 offset-md-1">
+                                  <div class="summary-div pb-0 my-4 my-md-0">
+                                          <h5 class="font-weight-bold">Summary</h5>
+                                          <div>
+                                                  <table class="table table-borderless">
+                                                      <tbody>
+                                                          <tr>
+                                                          <td>Items</td>
+                                                          <td class="text-right">GHS 36,032.50</td>
+                                                          </tr>
+                                                          <tr>
+                                                          <td>Delivery</td>
+                                                          <td class="text-right">GHS 0.00</td>
+                                                          </tr>
+                                                          <tr class="border-top">
+                                                          <td>Total</td>
+                                                          <td class="text-right font-weight-bold">GHS 36,032.50</td>
+                                                          </tr>
+                                                      </tbody>
+                                                  </table>
+                                          </div>
+                                  </div>
+  
+                              </div>
+  
+                          </div>
+  
+                    
+                    </div>
+        
+                  
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+            <!-- End Delivery Drawer Modal -->
+
+       <!-- Extra Drawer Modal -->
+       <div class="modal fade modal-right-pane" id="extraDrawer" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="deliveryDrawerLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content d-block">
+    
+              <div class="container">
+               
+    
+                <div class="modal-body p-0">
+                      <div class="catBar pt-4 pb-3">
+                          <div class="container p-0">
+                              <div class="row">
+                                  <div class="col-12">
+                                  <span data-dismiss="modal" class="text-primary pointer">&lsaquo; Return</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="extras mb-3">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class=" d-flex text-white justify-content-center align-items-center tiles-blue">
+                                  <img class="img-fluid h-100 mr-3" src="images/deliver.png" alt="" width="58">
+                                  <div>
+                                    <h5 class="m-0">FAST DELIVERY</h5>
+                                    <p class="m-0">For all orders</p>
+                                  </div>
+                              </div>
+            
+                            </div>
+                            <div class="col-md-4">
+                                <div class=" d-flex text-white justify-content-center align-items-center tiles-orange">
+                                    <img class="img-fluid h-100 mr-3" src="images/back.png" alt="" width="32">
+                                    <div>
+                                      <h5 class="m-0">FREE RETURNS</h5>
+                                      <p class="m-0">For all orders</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class=" d-flex text-white justify-content-center align-items-center tiles-green">
+                                      <img class="img-fluid h-100 mr-3" src="images/telephone.png" alt="" width="43">
+                                      <div>
+                                        <h5 class="m-0">CUSTOMER CARE</h5>
+                                        <p class="m-0">For all orders</p>
+                                      </div>
+                                  </div>
+                                </div>
+                          </div>
+                      </div>
+
+                      <h5 class="font-weight-bold mt-5 mb-3">Return Policy</h5>
+                      <p>We accept returns. You can return unopened items has with receipt or proof of purchase. If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.
+                        </p>
+
+                      <h5 class="font-weight-bold mt-5 mb-3">Customer Care</h5>
+
+                      <address>
+                          <strong>Address:</strong><br>
+                          No. 1 Hotel Avenue<br>
+                          Kokomlemle, Accra<br>
+                      </address>
+
+                      <address>
+                          <strong>Email:</strong><br>
+                          maxwellgol123@gmail.com
+                          <br>
+                        
+                      </address>
+
+                      <address>
+                          <strong>Phone:</strong><br>
+                          0302 230 203<br>
+                         
+                      </address>
+                    
+
+                
+                </div>
+    
+              
+              </div>
+    
+            </div>
+          </div>
+        </div>
+        <!-- End Extra Drawer Modal -->
+  
+
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form action="search.html">
+            <input type="search" value="" placeholder="type keyword(s) here" />
+            <button type="submit" class="btn btn-store">Search</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="checkoutConfirm" tabindex="-1" role="dialog" aria-labelledby="checkoutConfirmTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-body pt-4">
+                <h4>Checkout?</h4>
+                <p>Are you sure we should proceed to checkout?</p>
+                <div style="background:#f4f4f4; color:#666; padding:15px;">
+                    <div class="row">
+                        <div class="col-6"> <h6 class="m-0">Cart items total</h6> </div>
+                        <div class="col-6 text-right"> <h6 class="m-0"> <strong><span class="currency">GHS</span> 200</strong> </h6> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-store inverse" data-dismiss="modal" data-toggle="modal" data-target="#cartDrawer">No! Take me to my cart</button>
+                <a href="#" class="btn btn-store">Yes! Proceed</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Branch Modal Start -->
+      <div class="modal fade" id="branchModalStart" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="checkoutConfirmTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-body pt-3 my-5">
+                <div class="text-center">
+                    <img class="cart-image" src="images/hub.png" class="img-fluid" width="30" />
+                  </div>
+                  <h5 class="text-center my-4 mb-5 font-weight-bold">Hubtel Web Store</h5>
+                  <p class="text-center">Welcome! <br> Please pick a branch to start shopping today.</p>
+                  <div class="text-center select-branch">
+                        <div class="btn-group branches w-100">
+                            <button type="button" class="btn btn-store text-left  inverse btn-block dropdown-toggle" data-toggle="dropdown">Main Branch <span class="caret"></span></button>
+                            <div class="dropdown-max">
+                                <ul class="dropdown-menu p-0 scrollable-menu" role="menu">
+                                <li><a href="#" class="border-bottom d-block py-2">Shoes</a></li>
+                                <li><a href="#" class="border-bottom d-block py-2">Slippers</a></li>
+                                <li><a href="#" class="border-bottom d-block py-2">Bags</a></li>
+                                <li><a href="#" class="border-bottom d-block py-2">Panties</a></li>
+                            </ul>
+                            </div>
+                          
+                        </div>
+
+                        <button class="btn btn-store w-100 mt-3" data-toggle="modal" data-target="#branchModalStart">Select Branch</button>
+                  </div>
+              </div>
+           
+              </div>
+          </div>
+      </div>
+  
+
+        <!-- Branch Modal -->
+      <div class="modal fade" id="branchModal" tabindex="-1" role="dialog" aria-labelledby="checkoutConfirmTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body pt-4 my-5">
+                    <div class="text-center text-muted mb-4"> 
+                        <div class="mb-2"> <h5 class="text-warning font-weight-bold"> Note </div> </h5>
+                        <div class="font-weight-bold">You will lose the contents of your cart, <br> if you change your branch while shopping. </div>
+                    </div>
+                    <div class="text-center select-branch">
+                            <div class="btn-group branches w-100">
+                                <button type="button" class="btn btn-store text-left  inverse btn-block dropdown-toggle" data-toggle="dropdown">Main Branch <span class="caret"></span></button>
+                                <div class="dropdown-max">
+                                    <ul class="dropdown-menu p-0 scrollable-menu" role="menu">
+                                    <li><a href="#" class="border-bottom d-block py-2">Shoes</a></li>
+                                    <li><a href="#" class="border-bottom d-block py-2">Slippers</a></li>
+                                    <li><a href="#" class="border-bottom d-block py-2">Bags</a></li>
+                                    <li><a href="#" class="border-bottom d-block py-2">Panties</a></li>
+                                </ul>
+                                </div>
+                              
+                            </div>
+    
+                            <button class="btn btn-store w-100 mt-3" data-toggle="modal" data-target="#branchModal">Switch Branch</button>
+                            <div class="pt-3"> <a href="#">Cancel and continue shopping</a></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/store.js"></script>
+
+    <script type="text/javascript" src="https://rawgit.com/lanre-ade/jQuery-slimScroll/master/jquery.slimscroll.js"></script>
+    
+    <script type="text/javascript">
+      $(window).on('load',function(){
+          // $('#branchModalStart').modal('show');
+      });
+
+
+       $('.slimScroll').slimScroll({
+            //  height: '554px',
+            // alwaysVisible:true
+            // touchScrollStep : 1,
+            // allowPageScroll: false
+          });
+
+          $('.mobile .slimScroll').slimScroll({
+             height: "calc(100vh - 94px)"
+         
+          });
+
+          
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "e-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\""
+  },
+  "keywords": [],
+  "author": "Brian Paintsil <brnpaintsil@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
+    "query-string": "^6.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
